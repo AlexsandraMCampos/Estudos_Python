@@ -20,7 +20,7 @@ def cont2():
     s = int(input("Informe a saída:"))
     p = int(input("Informe o passo:"))
 
-    if e > s and p >0 :
+    if e > s and p > 0 :
         p = -p
     for z in range(e,s,p):      
         print(z, end=" ") 
