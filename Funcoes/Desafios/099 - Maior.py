@@ -9,27 +9,27 @@
 # - apresentar o valor do maior número
 # - apresentar a quantidade de números recebidos
 
+def maior(*numeros):
+    if not numeros:
+        print("Nenhum número foi informado.") # caso não seja informado número
+        return
 
-numeros = []
+    maior_numero = max(numeros) # obter o maior número da sequência
+    qtd = len(numeros) # obter quantos números foram informados
 
+    print(f"Foram informados {qtd} números: {numeros}.")
+    print(f" O maior número é {maior_numero}.")
 
+#Solicitar os números ao usuário
+lista_numeros =[]
 
-# def maior():
-n = int(input("Informe um número inteiro  para sair: ")) 
-#     for n in numeros():              
-#         numeros.append(n)
-#         continue
-#         qtd= numeros.len()
-#         maior = max.numeros()
-      
-#         if n == 00:
-#             break
-#         print(f'Foi informado {qtd} números e eles são: {numeros} e o maior deles é {maior}.')
-#     return maior()
+while True:
+        n =input("Digite um número inteiro ou 'sair' para finalizar: ") 
+        if n.lower() == 'sair': # condição para o programa ser finalizado
+            break
+        try:
+            lista_numeros.append(int(n)) # checagem se o número é inteiro e adicionar na lista
+        except ValueError:
+            print("Por favor, digite um número válido.") # informação caso o usuário informe um valor errado
 
-    
-
-
-
-
-
+maior(*lista_numeros)
